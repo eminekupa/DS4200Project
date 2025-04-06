@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Average Room Rates - Influence on Cancellation</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: justify;
+        }
+
+        /* Unordered List Style*/
+        ul {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            padding: 0;
+            max-width: 800px;
+            text-align: left;
+            list-style-type: none; /* Remove default bullets */
+        }
+
+        ul li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: "-"; 
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            color: #070708; 
+        }
+
+        /* Image Style */
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        /* Link Style */
+        a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>General Instructions for Interactive Plot</h2>
+    <p>
+        For the following, you can select a specific interval for the Line Plot's monthly 
+    date range. Select and drag this interval to whichever point you prefer. The changes will
+    be updated automatically in the Bar Plot, so you'll be able to see which types of travellers
+    were most likely to cancel their bookings/reservations within that timeframe.
+    </p>
+
+    <iframe src="altair_advCancel.html" width="100%" height="500px" style="border:none"></iframe>
+
+    <h2>Analysis of the Interactive Line & Bar Plot:
+    </h2>
+    <p>
+            Based on the interactive visualization above, one could see that it's a joint graph between a 
+        line and bar plot. The reasoning behind this is to provide accurate insights behind what might be driving 
+        cancellation rates in hotels in Spain, Italy, and France - we can determine exploratory and explanatory insights 
+        from this visualization. The line plot measures average room rates respective to a specific month and year; for 
+        these values, the Average Daily Room Rate has been aggregated from a daily to a monthly rate, which maintains 
+        consistency with the date (independent variable). As for the specific trends that we can see, this relationship 
+        has been designated by the specific country the hotels pertain to. For example, we see a similar, potentially cyclical 
+        trend, that might hint at seasonality between the Summer and Winter months. It looks like that the room rates are at 
+        elevated values for Summer months, which suggests that demand might be higher during these months, due to factors like 
+        tourism. On a per country basis, it is hard to make a determinable conclusion other than the fact that Spain has had the 
+        highest Summer monthly rates (2016 & 2017) whereas they had the lowest Winter monthly rates (2015) and France also had the 
+        lowest (2017).
+            As for the bar plot, this analysis is between traveler type and the percentage of cancellations respective to that 
+        type. Our motive to include this graph was to be able to understand, at specific periods, which types of travelers were 
+        cancelling reservations more so than the other groups. This plot updates per the selection interval the user makes in the 
+        line plot. Overall, though, we can clearly see that an overwhelming majority of cancellations stem from the "couple" traveler 
+        type. This is an interesting factor because it is at 70%, which is ~60% higher than the next respective type (family). This 
+        possibly suggests that couples have more freedom to move hotel bookings or a higher incentive to look for bargains and, 
+        therefore, cancel bookings that are too expensive/not worth it. This also suggests that, for the other types, it might be 
+        too difficult for families or solo travelers to cancel bookings: families typically have a lot of responsibilities and solo 
+        travelers might be highly correlated with business travel. 
+    </p>
+
+    <h1>
+        Back to Homepage:
+    </h1>
+    <a href="index.html">Click Here to Go Back</a>
+</body>
+
+</html>
+
