@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Loyalty Impact - Mediterranean Hotel Dynamics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Plotly.js for interactive visualizations -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">Mediterranean Hotel Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="distribution.html">Distribution Channels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="loyalty.html">Guest Loyalty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="geography.html">Geographic Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demographics.html">Demographics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bold">Guest Loyalty Impact</h1>
+                    <h2 class="mb-4">The Loyalty Factor: New vs. Returning Guests Cancellation Patterns</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Analysis Overview</h3>
+                    <p class="lead">
+                        This visualization explores how guest loyalty influences cancellation behavior across Mediterranean countries. By comparing cancellation rates between first-time and repeat guests in Spain, France, and Italy, we uncover significant patterns that can inform hotel retention strategies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main Visualization -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="visualization-container">
+                        <div id="loyalty-visualization">
+                            <!-- Image of the visualization -->
+                            <img src="images/loyalty_visualization.png" alt="Guest Loyalty Visualization" class="img-fluid rounded">
+                        </div>
+                        <div class="text-center mt-3">
+                            <p class="text-muted fst-italic">Hotel Booking Cancellation Rates: New vs. Repeated Guests by Country</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis and Insights -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Key Insights</h3>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">The Loyalty Advantage</h5>
+                            <p class="card-text">
+                                Our analysis reveals a consistent pattern across all three Mediterranean countries: repeat guests demonstrate significantly lower cancellation rates compared to first-time visitors. This "loyalty advantage" is most pronounced in Spain, where new guests show cancellation rates averaging 30-40% throughout the observed period, while repeat guests maintain rates below 10% in most months. This stark contrast highlights the business value of customer loyalty programs and retention efforts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Country-Specific Patterns</h5>
+                            <p class="card-text">
+                                Each country exhibits distinct patterns in loyalty behavior. Spain shows the most stable relationship, with consistently higher new guest cancellations. France demonstrates unusual volatility, with periodic spikes in repeat guest cancellations (notably in late 2015) that occasionally exceed new guest rates - suggesting potential issues with repeat visitor satisfaction. Italy displays the most dramatic fluctuations for both guest types, with particularly high cancellation rates in July 2015 and mid-2017, indicating possible seasonal factors or market-specific disruptions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Temporal Trends</h5>
+                            <p class="card-text">
+                                The visualization reveals intriguing seasonal patterns across the 2015-2017 period. New guest cancellations tend to increase during peak summer periods and decline during winter months, particularly visible in the Spanish data. This suggests that first-time bookings made for high-season periods are subject to greater uncertainty and change. Notably, the gap between new and repeat guest cancellation rates widens during these high-demand periods, further emphasizing the stability value that loyal customers represent during critical business cycles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Elements Explanation -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">How to Use This Visualization</h3>
+                    <p>
+                        This interactive visualization allows you to explore cancellation patterns over time:
+                    </p>
+                    <ul>
+                        <li>Use the time range selector buttons (3m, 6m, 1y, All) to focus on specific periods</li>
+                        <li>The range slider at the bottom allows for precise time window selection</li>
+                        <li>Hover over lines to see exact cancellation rates at specific points in time</li>
+                        <li>Each country maintains its own color scheme (Spain: red, France: blue, Italy: green)</li>
+                        <li>Solid lines represent new guests while dashed lines represent repeat guests</li>
+                    </ul>
+                    <p>
+                        This approach provides a clear visual contrast between new and repeat guest behavior, allowing for easy identification of patterns across different Mediterranean markets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Mediterranean Hotel Dynamics - Data Visualization Project</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
