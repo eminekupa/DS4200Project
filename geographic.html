@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographic Analysis - Mediterranean Hotel Dynamics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mediterranean Hotel Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="distribution.html">Distribution Channels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loyalty.html">Guest Loyalty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="geography.html">Geographic Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="market_segmentation.html">Market Segmentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demographics.html">Demographics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bold">Mediterranean Booking Landscape</h1>
+                    <h2 class="mb-4">Location, Season, and Travel Purpose</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Analysis Overview -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Analysis Overview</h3>
+                    <p class="lead">
+                        This visualization maps cancellation patterns across Spain, France, and Italy, revealing geographic variations in hotel booking behaviors. By examining both city and resort hotels separately and filtering by season and travel purpose, we can identify distinct regional patterns and better understand how location influences cancellation likelihood.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main Visualization -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="visualization-container">
+                        <!-- Tableau Embed Code - Replace with your actual embed code when available -->
+                        <div class="tableauPlaceholder" id="viz-container">
+                            <!-- If you have published to Tableau Public, replace this entire div with your Tableau embed code -->
+                            <img src="images/geographic_visualization.png" alt="Geographic Analysis of Mediterranean Hotels" class="img-fluid rounded">
+                            
+                            <!-- Alternative: If you're not using Tableau Public, you could create a simple interactive view with tabs -->
+                            <div class="mt-4 mb-2">
+                                <ul class="nav nav-tabs" id="vizTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All Filters</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business" type="button" role="tab">Business Travel</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="leisure-tab" data-bs-toggle="tab" data-bs-target="#leisure" type="button" role="tab">Leisure Travel</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="seasons-tab" data-bs-toggle="tab" data-bs-target="#seasons" type="button" role="tab">Seasonal Patterns</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-3" id="vizTabContent">
+                                    <div class="tab-pane fade show active" id="all" role="tabpanel">
+                                        <img src="images/geo_all.png" class="img-fluid rounded" alt="All filters">
+                                        <p class="mt-2 text-muted">Overall cancellation rates across all segments and seasons</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="business" role="tabpanel">
+                                        <img src="images/geo_business.png" class="img-fluid rounded" alt="Business travel">
+                                        <p class="mt-2 text-muted">Cancellation patterns for business travelers</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="leisure" role="tabpanel">
+                                        <img src="images/geo_leisure.png" class="img-fluid rounded" alt="Leisure travel">
+                                        <p class="mt-2 text-muted">Cancellation patterns for leisure travelers</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="seasons" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <img src="images/geo_spring.png" class="img-fluid rounded" alt="Spring season">
+                                                <p class="mt-1 text-muted">Spring bookings</p>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <img src="images/geo_summer.png" class="img-fluid rounded" alt="Summer season">
+                                                <p class="mt-1 text-muted">Summer bookings</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="images/geo_fall.png" class="img-fluid rounded" alt="Fall season">
+                                                <p class="mt-1 text-muted">Fall bookings</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="images/geo_winter.png" class="img-fluid rounded" alt="Winter season">
+                                                <p class="mt-1 text-muted">Winter bookings</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insights -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Key Insights</h3>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">City vs. Resort Hotel Contrast</h5>
+                            <p class="card-text">
+                                Our analysis reveals a striking pattern across all three Mediterranean countries: city hotels consistently show higher cancellation rates than resort hotels. This contrast is most pronounced in Italy, where city hotels experience cancellation rates reaching 35-45% (depending on season), while resort hotels maintain much lower rates (typically under 20%). This suggests that city hotel bookings, often made for business purposes or short urban stays, are subject to greater scheduling uncertainty and flexibility than destination resort bookings.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Seasonal Variation Impact</h5>
+                            <p class="card-text">
+                                Seasonal patterns significantly influence cancellation behavior, particularly for summer bookings. During summer months, all three countries show elevated cancellation rates, with the most dramatic increase in Spain's resort hotels (jumping to 30.85% from their typical 21.51%). Spring bookings in Italy show the highest overall cancellation rates (35.53% for city hotels), possibly reflecting the uncertainty around early tourist season weather conditions. Winter shows the lowest overall cancellation rates, suggesting bookings during the off-season tend to be more definitive.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Business vs. Leisure Travel Purpose</h5>
+                            <p class="card-text">
+                                Business travel bookings show consistently higher cancellation rates than leisure bookings across all regions, with the difference most pronounced in France (31.57% for business vs. 17.70% for leisure in city hotels). This pattern aligns with the unpredictable nature of business schedules and the greater likelihood of meeting cancellations or changes. In contrast, leisure bookings - especially to resort destinations - show greater commitment, with cancellation rates averaging 10-15% lower than their business counterparts.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Country-Specific Patterns</h5>
+                            <p class="card-text">
+                                Italy consistently shows the highest cancellation rates across most segments (peaking at 45.16% for business travelers in city hotels), followed by Spain, with France showing the lowest rates. This suggests potential cultural or market-specific factors influencing booking commitment. Spain shows the most consistent rates between city and resort hotels, while France and Italy display greater disparity between hotel types. These country-specific patterns point to different market dynamics that hotel revenue managers should consider when developing pricing and overbooking strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Elements Explanation -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">How to Use This Visualization</h3>
+                    <p>
+                        This interactive visualization allows you to explore cancellation patterns across Mediterranean countries with several filtering options:
+                    </p>
+                    <ul>
+                        <li><strong>Travel Purpose Filter:</strong> Toggle between "Business" and "Leisure" to see how travel purpose affects cancellation rates</li>
+                        <li><strong>Season Filter:</strong> Select specific seasons (Spring, Summer, Fall, Winter) to examine seasonal variation</li>
+                        <li><strong>Side-by-Side Comparison:</strong> City hotels (left) and resort hotels (right) are displayed separately for direct comparison</li>
+                        <li><strong>Bubble Size:</strong> Represents the volume of bookings for each country and hotel type</li>
+                        <li><strong>Percentages:</strong> The values shown are cancellation rates for each country and hotel type</li>
+                    </ul>
+                    <p>
+                        By comparing these visualizations, you can identify which combinations of country, hotel type, season, and travel purpose experience the highest and lowest cancellation rates, providing valuable insights for revenue management strategies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Mediterranean Hotel Dynamics - Data Visualization Project</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
