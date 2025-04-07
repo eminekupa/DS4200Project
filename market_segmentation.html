@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Segmentation Analysis - Mediterranean Hotel Dynamics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mediterranean Hotel Analysis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="distribution.html">Distribution Channels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loyalty.html">Guest Loyalty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="geography.html">Geographic Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="market_segmentation.html">Market Segmentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demographics.html">Demographics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bold">Market Dynamics</h1>
+                    <h2 class="mb-4">How Customer Types and Market Segments Intersect</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Analysis Overview</h3>
+                    <p class="lead">
+                        This visualization examines the relationship between market segments and customer types across Spain, France, and Italy, revealing which combinations are most prone to cancellations. Understanding these patterns helps hotels identify high-risk booking categories and develop targeted retention strategies for different customer segments.
+                    </p>
+                    <p>
+                        The heatmaps display cancellation rates for each market segment (rows) and customer type (columns) combination, with separate visualizations for each country. This side-by-side comparison highlights both regional patterns and country-specific anomalies in cancellation behavior.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Main Visualization -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="visualization-container">
+                        <div id="market-segmentation-visualization">
+                            <!-- Image of the visualization -->
+                            <img src="images/market_segmentation_by_country.png" alt="Market Segmentation Analysis" class="img-fluid rounded">
+                        </div>
+                        <div class="text-center mt-3">
+                            <p class="text-muted fst-italic">Market Segment vs. Customer Type Cancellation Rates by Country</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis and Insights -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Key Insights</h3>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">High-Risk Booking Combinations</h5>
+                            <p class="card-text">
+                                Across all three countries, certain market segment and customer type combinations consistently show elevated cancellation rates. In Spain, "Aviation" and "Group" bookings show the highest cancellation rate (80%), while "Groups" with "Contract" arrangements are similarly risky (77%). For Italy, "Online TA" (Travel Agency) bookings combined with "Transient" customers show a 49% cancellation rate. These high-risk combinations should be primary targets for cancellation mitigation strategies.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Regional Variations</h5>
+                            <p class="card-text">
+                                Each Mediterranean country displays distinct cancellation patterns. Spain shows its highest cancellation rates in group bookings (particularly Aviation and Groups segments), while France has more moderate rates concentrated in Online TA and Groups segments with Transient customers. Italy demonstrates the most severe cancellation issues with Online TA bookings, particularly for Transient customers. These regional differences may reflect varying market conditions, competitive landscapes, or cultural approaches to booking behavior.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Type Impact</h5>
+                            <p class="card-text">
+                                "Transient" customers consistently show the highest cancellation rates across all countries and market segments, suggesting that non-group individual travelers without corporate contracts represent a significant cancellation risk. In contrast, "Contract" and "Group" customer types generally demonstrate lower cancellation rates (with notable exceptions in Spain's Group category). This pattern suggests that formalized booking arrangements with contractual obligations significantly reduce cancellation likelihood.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Travel Agency Vulnerability</h5>
+                            <p class="card-text">
+                                The "Online TA" market segment shows consistently high cancellation rates across all three countries, particularly with Transient customers (39% in Spain, 30% in France, and 49% in Italy). This pattern likely reflects the ease of booking and cancellation through online platforms, lower financial commitment (free cancellation policies), and increased price-shopping behavior among online bookers. Hotels heavily dependent on online travel agency bookings should consider differential pricing or cancellation policies to mitigate this risk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology Note -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="mb-4">Visualization Methodology</h3>
+                    <p>
+                        This visualization uses heatmaps to display cancellation rates for each combination of market segment and customer type. The three-panel approach allows for direct country comparison, with consistent color schemes for each country (red for Spain, blue for France, green for Italy). Darker shades indicate higher cancellation rates, while blank spaces represent combinations with insufficient data. The "Total" row and column provide overall cancellation rates for each market segment and customer type.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Mediterranean Hotel Dynamics - Data Visualization Project</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
