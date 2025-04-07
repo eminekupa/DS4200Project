@@ -35,7 +35,7 @@
                         <a class="nav-link" href="market_segmentation.html">Market Segmentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="demographics.html">Demographics</a>
+                        <a class="nav-link" href="roomRates_travelerCancel.html">Demographics</a>
                     </li>
                 </ul>
             </div>
@@ -66,6 +66,31 @@
                     <p>
                         Using a comprehensive dataset of over 22,000 hotel bookings from both city and resort properties, we analyze how different guest demographics, booking channels, and loyalty factors affect cancellation likelihood. This regional focus allows us to identify meaningful patterns within similar yet distinct hospitality markets that share Mediterranean tourism characteristics.
                     </p>
+                    <h3 class="mb-4">Dataset Facts</h3>
+                    <p>
+                        We found this dataset after specifically looking online for hotel booking data, as we wanted to further explore the impacts that cancellations have on the industry (or what might be driving them). We figured that there must be research published relating to this, due to the fact that cancellations are a major factor in similar industries - like aviation - and there has been research conducted in those respective spaces. Subsets of this dataset have been used in research papers to construct Machine Learning models, and therefore conduct an analysis of what might be driving these trends and how it applies to the overall industry.
+                    </p>
+                    <p>
+                        The dataset, without any filtering, contained over 100,000 rows where 1 row represents 1 hotel booking, for either an individual, family, or related party. The dataset’s features relate to booking details & timing, and personal information for guests. For booking details & timing features, this data includes notes about the category of hotel, its market segment or distribution channel, if changes have been made to it, and the associated agent/3rd-party company. As for the personal information for guests features, this all relates to the type of people who are related to each booking (adults, children, babies), if they’ve stayed at the specific hotel before, how many (if any) previous bookings or cancellations they’ve made, personal information, arrival & departure dates, etc. Other useful information included in the dataset’s attributes relates to the status of the reservation - i.e. if it was canceled or not - the specific room rates and deposit types, and variables associated with room servicing.
+                    </p>
+                    <h3 class="mb-4">Data Cleaning</h3>
+                    <p>
+                        For the data cleaning aspect of the project, we first started out by merging 2 of the datasets we found in the research article, where one file corresponded to resort hotels and the other to city hotels. After we merged both datasets, we filtered the data down to only include bookings from hotels located in Spain, Italy, and France.
+                    </p>
+                    <p>
+                        The next aspect of cleaning included was that we first made sure to convert columns’ data types to the proper ones, to allow for proper and further manipulation. We then automatically removed any rows that were fully null. There were only a few, so this step wasn’t extremely important. We then sought to highlight which columns had the highest proportions of null data (versus the total). Based on this analysis, we found that the 2 columns with null prevalencies represented the company on the booking entry, and the agent represented on the booking entry. The booking company column was ~98% filled with null values, so we simply removed it. However, for the booking agent column, only 7% was null, so we replaced those values with the most common amount (mode) in that column.
+                    </p>
+                    <p>
+                        After this, we manually created columns for family demographic data, as the original data representation was sparse and only indicated amounts for each category (adults, children, babies). We instead represented demographics by if the traveler was solo, were a couple, or was a family. Finally, we aggregated data and created columns relating to the specific season, instead of months, and based on how long people were booking reservations.
+                    </p>
+                    <p>
+                        The final step we took to clean the data was to assess a few distributions of the data, in order to determine if there were any outliers present. Through these analyses, though, we didn’t find significant amounts of outliers to remove.
+                    </p>
+                    <h3 class="mb-4">References</h3>
+                    <ol>
+                        <li>https://www.sciencedirect.com/science/article/pii/S2352340918315191 - Provides the foundational dataset and methodology for hotel booking analysis</li>
+                        <li>https://ieeexplore.ieee.org/abstract/document/8260781 - Offers insights into prediction methods for hotel cancellations</li>
+                    </ol>
                 </div>
             </div>
 
@@ -121,7 +146,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">5. Demographic Influences</h5>
                                 <p class="card-text">Analyze how family composition and traveler types affect booking stability throughout different seasons.</p>
-                                <a href="demographics.html" class="btn btn-outline-primary btn-sm">View Analysis</a>
+                                <a href="roomRates_travelerCancel.html" class="btn btn-outline-primary btn-sm">View Analysis</a>
                             </div>
                         </div>
                     </div>
