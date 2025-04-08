@@ -47,6 +47,9 @@
           <p class="lead">
             This project began with a simple question: why do hotel bookings get canceled? Over the course of the semester, we examined this question through the lens of over 22,000 bookings across Spain, France, and Italy — three tourism-driven Mediterranean economies.
           </p>
+          <p>
+            Our visualization story follows a deliberate narrative arc that progressively deepens the analysis: starting with how people book (channels), moving to who they are (repeat vs. new guests), where they're booking (geographic context), what drives their decisions (pricing and demographics), and ultimately which market segments they belong to. This progression allows us to uncover the multifaceted nature of cancellation behaviors across the Mediterranean region.
+          </p>
         </div>
       </div>
 
@@ -58,12 +61,12 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Booking Channel Sets the Tone</h5>
               <p class="card-text">
-                Our first visualization showed that how a guest books strongly impacts cancellation likelihood.
+                Our first visualization revealed a striking correlation between booking method and cancellation likelihood, with TA/TO channels showing cancellation rates over three times higher than direct bookings.
               </p>
               <ul>
-                <li>Direct bookings: lowest cancellation rate (guest commitment is higher)</li>
-                <li>Travel agents & OTAs: most cancellations (possibly due to flexibility or non-refundable offers)</li>
-                <li>Insight: Hotels can reduce risk by promoting direct booking strategies</li>
+                <li>Direct/Corporate bookings: lowest cancellation rates (~8%)</li>
+                <li>TA/TO channels: highest cancellations (~26%)</li>
+                <li>ODS: moderate risk (~12%)</li>
               </ul>
             </div>
           </div>
@@ -72,54 +75,55 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Loyalty Is Stability</h5>
               <p class="card-text">
-                Our interactive line plot revealed that repeat guests are far more likely to keep their bookings.
+                Our interactive line plot demonstrated that new guests are significantly more likely to cancel their reservations, while repeat guests demonstrate much stronger booking commitment across all three countries.
               </p>
               <ul>
-                <li>Repeat guests cancel less than 10% of the time</li>
-                <li>New guests show spikes up to 40%</li>
-                <li>Loyalty is a powerful buffer against unpredictability</li>
+                <li>New guests: 30-40% cancellation rates</li>
+                <li>Repeat guests: under 10% cancellation rates</li>
+                <li>Gap widens during peak seasons</li>
               </ul>
             </div>
           </div>
 
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-primary fw-bold">Geography Matters</h5>
+              <h5 class="card-title text-primary fw-bold">Regional Booking Patterns</h5>
               <p class="card-text">
-                Our map-based geographic analysis showed that cancellation patterns vary by country and hotel type.
+                Our geographic analysis uncovered distinct cancellation behaviors across countries, hotel types, and booking purposes, with considerable variation based on location and travel intent.
               </p>
               <ul>
-                <li>Resort hotels see more seasonal cancellation spikes</li>
-                <li>City hotels tend to be more consistent</li>
-                <li>Context matters when modeling guest behavior</li>
+                <li>City hotels: higher cancellation rates than resorts</li>
+                <li>Business travel: more cancellations than leisure</li>
+                <li>Italy: highest overall cancellation rates</li>
               </ul>
             </div>
           </div>
 
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-primary fw-bold">Demographics Influence Behavior</h5>
+              <h5 class="card-title text-primary fw-bold">Price Sensitivity and Traveler Types</h5>
               <p class="card-text">
-                Demographic plots showed that guest types shape booking stability.
+                Our interactive visualization of room rates and traveler demographics revealed clear patterns in cancellation behavior, with certain traveler types showing significantly higher price sensitivity.
               </p>
               <ul>
-                <li>Families with babies had the highest cancellation rates</li>
-                <li>Solo travelers were the most consistent</li>
-                <li>Targeted policies could reduce cancellations for family-oriented bookings</li>
+                <li>Couples: highest cancellation rates (~70%)</li>
+                <li>Seasonal pricing affects cancellation patterns</li>
+                <li>Solo travelers: most stable bookings</li>
               </ul>
             </div>
           </div>
 
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-primary fw-bold">Segmenting for Strategy</h5>
+              <h5 class="card-title text-primary fw-bold">Market Segment Vulnerabilities</h5>
               <p class="card-text">
-                Our final matrix explored cancellation rates across market segments and customer types.
+                Our market segmentation analysis identified specific high-risk booking combinations that hotels should monitor closely to improve booking reliability and revenue forecasting.
               </p>
               <ul>
-                <li>Groups and corporate segments had distinct cancellation profiles</li>
-                <li>Transient vs. contract guests behaved very differently</li>
-                <li>Market segmentation offers powerful levers for retention strategy</li>
+                <li>Aviation/Group: highest risk in Spain</li>
+                <li>Online TA/Transient: problematic across all countries</li>
+                <li>Contract bookings: generally more reliable</li>
+                <li>Country-specific patterns require targeted strategies</li>
               </ul>
             </div>
           </div>
@@ -129,17 +133,9 @@
       <!-- Forward Looking -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Where This Can Go</h3>
+          <h3 class="mb-4">Connecting the Narrative</h3>
           <p>
-            This project opened the door to new questions and future possibilities:
-          </p>
-          <ul>
-            <li>How do cancellations evolve with time?</li>
-            <li>What role does price sensitivity or weather play?</li>
-            <li>Could machine learning models predict cancellations by profile?</li>
-          </ul>
-          <p>
-            With more data, tools, and time, these avenues could strengthen hotel operations and guest satisfaction across even more regions.
+            By understanding these cancellation patterns, our visualization story provides insights that hotel managers can use to better predict booking reliability, improve revenue forecasting, and develop targeted retention strategies for the Mediterranean market. Our progression from booking channels to customer segments creates a comprehensive view of what drives cancellation behaviors.
           </p>
         </div>
       </div>
@@ -149,7 +145,7 @@
         <div class="col-lg-8 mx-auto">
           <h3 class="mb-4">Final Reflection</h3>
           <p>
-            Through this project, we uncovered several key drivers of booking cancellations in Mediterranean hotels. We found that bookings made through third-party channels are significantly more prone to cancellation than direct bookings. Repeat guests are far more likely to follow through with their reservations, especially during high-demand periods, highlighting the importance of loyalty. Demographic factors also played a critical role with families with young children being much more likely to cancel compared to solo travelers or couples. Our market segmentation analysis added another layer, revealing that certain guest types and contract types are consistently more reliable than others. These findings emphasize the need for hotels to tailor their booking strategies, cancellation policies, and customer engagement efforts based on both how and who is booking. Overall, our work demonstrates how structured data analysis and visualization can uncover practical insights that directly inform operational decision-making in the hospitality industry.
+            Our analysis reveals that cancellation behaviors in Mediterranean hotels are influenced by multiple interconnected factors. Booking channels significantly impact reliability, with direct bookings proving most stable. Customer loyalty emerges as perhaps the strongest predictor of booking commitment, with repeat guests consistently showing lower cancellation rates. Geographic and seasonal patterns vary considerably, with city hotels and business travelers demonstrating higher cancellation tendencies than resort and leisure bookings. Demographic analysis shows couples are surprisingly more likely to cancel than other traveler types. Finally, our market segmentation uncovers specific high-risk combinations like Online TA/Transient customers that require targeted retention strategies. These findings provide hotel managers with actionable insights to develop differentiated pricing, overbooking policies, and marketing strategies tailored to each segment's distinct cancellation risk profile.
           </p>
         </div>
       </div>
