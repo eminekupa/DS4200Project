@@ -46,7 +46,7 @@
         <div class="col-lg-8 mx-auto">
           <h3 class="mb-4">Why Start with Distribution Channels?</h3>
           <p class="lead">
-            In our investigation of hotel booking cancellations, we begin with a simple but crucial question: <strong>Does the way a guest books their stay affect the likelihood of cancellation?</strong>  
+            In our investigation of hotel booking cancellations, we begin with a simple but crucial question: Does the way a guest books their stay affect the likelihood of cancellation?
           </p>
           <p>
             Understanding this relationship is essential for hotel revenue managers and operations teams. Booking platforms introduce varying levels of uncertainty, customer loyalty, and cancellation risk.
@@ -81,29 +81,32 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Booking Source Matters</h5>
               <p class="card-text">
-                Our chart clearly shows that Travel Agent bookings are the most likely to be canceled, followed closely by Online Travel Agencies (OTAs). In contrast, Direct bookings have the lowest cancellation rate, signaling a higher level of guest commitment.
+                Our chart clearly shows that Travel Agent (TA) bookings are the most likely to be canceled, followed closely by Tour Operators (TO) and Global Distribution Systems (GDS). In contrast, Direct bookings have the lowest cancellation rate, signaling a higher level of guest commitment.
               </p>
               <ul>
-                <li>Travel Agent: Highest cancellation rate (over 50%)</li>
-                <li>Direct Bookings: Lowest cancellation rate (under 25%)</li>
-                <li>OTA: Moderate but significant cancellation risk</li>
+                <li>TA (Travel Agents): Highest cancellation rate</li>
+                <li>TO (Tour Operators): High cancellation risk, especially for group travel</li>
+                <li>GDS (Global Distribution Systems): Often used by business/corporate channels with moderate risk</li>
+                <li>Direct: Lowest cancellation rate, best for hotel reliability</li>
               </ul>
               <p class="mb-0">
-                These trends reinforce the idea that hotels should promote direct booking through loyalty programs or exclusive perks to reduce cancellation risk and increase revenue reliability.
+                These trends reinforce the importance of promoting direct booking through loyalty programs or exclusive offers, as well as the need to monitor high-risk third-party channels.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Design Notes -->
+      <!-- Design Explanation -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Visualization Design Highlights</h3>
+          <h3 class="mb-4">How We Designed This Visualization</h3>
           <ul>
-            <li>D3 bar chart with custom color and hover effect for clarity and engagement</li>
-            <li>Sorted layout to emphasize the contrast between channels</li>
-            <li>Axes are labeled and percentage scale is used for intuitive comparison</li>
+            <li>Used a horizontal layout and sorted bars to emphasize distribution channels from highest to lowest risk</li>
+            <li>Added a clear chart title, axis labels, and a legend to improve interpretability</li>
+            <li>Hover interactivity (orange highlight) helps viewers identify specific values during presentations</li>
+            <li>Clean padding and spacing using Bootstrap grid for responsive display</li>
+            <li>Percent axis formatting allows viewers to instantly understand cancellation proportions</li>
           </ul>
         </div>
       </div>
@@ -123,7 +126,7 @@
   <!-- D3 Chart Script -->
   <script>
     const svg = d3.select("#d3-chart"),
-          margin = {top: 40, right: 20, bottom: 60, left: 80},
+          margin = {top: 60, right: 150, bottom: 60, left: 80},
           width = parseInt(svg.style("width")) - margin.left - margin.right,
           height = parseInt(svg.style("height")) - margin.top - margin.bottom;
 
@@ -145,6 +148,7 @@
           .nice()
           .range([height, 0]);
 
+      // X-axis
       chart.append("g")
           .attr("transform", `translate(0,${height})`)
           .call(d3.axisBottom(x))
@@ -152,9 +156,11 @@
             .attr("transform", "rotate(-25)")
             .style("text-anchor", "end");
 
+      // Y-axis
       chart.append("g")
           .call(d3.axisLeft(y).tickFormat(d3.format(".0%")));
 
+      // Bars
       chart.selectAll(".bar")
           .data(data)
           .enter().append("rect")
@@ -170,6 +176,15 @@
             .on("mouseout", function () {
               d3.select(this).attr("fill", "steelblue");
             });
+
+      // Chart Title
+      svg.append("text")
+        .attr("x", margin.left + width / 2)
+        .attr("y", 25)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "20px")
+        .attr("font-weight", "bold")
+        .text("Hotel Booking Cancellation Rate by Distribution Channel");
 
       // Axis labels
       svg.append("text")
@@ -187,6 +202,23 @@
         .attr("class", "axis-label")
         .style("text-anchor", "middle")
         .text("Cancellation Rate");
+
+      // Legend
+      const legend = svg.append("g")
+        .attr("transform", `translate(${width + margin.left + 10}, ${margin.top})`);
+
+      legend.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("fill", "steelblue");
+
+      legend.append("text")
+        .attr("x", 30)
+        .attr("y", 15)
+        .text("Cancellation Rate")
+        .attr("font-size", "14px");
     });
   </script>
 </body>
