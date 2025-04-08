@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Distribution Channel Impact - Mediterranean Hotel Dynamics</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- D3.js -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -16,7 +13,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand" href="index.html">Mediterranean Hotel Analysis</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,8 +21,10 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="distribution.html">Distribution Channels</a></li>
           <li class="nav-item"><a class="nav-link" href="loyalty.html">Guest Loyalty</a></li>
-          <li class="nav-item"><a class="nav-link" href="geography.html">Geographic Analysis</a></li>
+          <li class="nav-item"><a class="nav-link" href="geographic.html">Geographic Analysis</a></li>
           <li class="nav-item"><a class="nav-link" href="roomRates_travelerCancel.html">Demographics</a></li>
+          <li class="nav-item"><a class="nav-link" href="market_segmentation.html">Market Segments</a></li>
+          <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
         </ul>
       </div>
     </div>
@@ -33,63 +32,80 @@
 
   <!-- Header -->
   <header class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="fw-bold">Distribution Channel Impact</h1>
-          <h2 class="mb-4">How Booking Methods Influence Hotel Cancellation Rates</h2>
-        </div>
-      </div>
+    <div class="container text-center">
+      <h1 class="fw-bold">Distribution Channel Impact</h1>
+      <h2 class="mb-4">Setting the Stage: Where and How Guests Book Their Hotel Stay</h2>
     </div>
   </header>
 
   <!-- Main Content -->
   <section class="py-5">
     <div class="container">
-      <!-- Overview -->
+      <!-- Context -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Analysis Overview</h3>
+          <h3 class="mb-4">Why Start with Distribution Channels?</h3>
           <p class="lead">
-            This static bar chart explores the cancellation rates across different booking distribution channels in Spanish hotels.
-            As part of our Mediterranean hotel analysis, we investigate which booking methods — such as travel agents, direct booking,
-            or online travel agencies — are more prone to cancellations.
+            In our investigation of hotel booking cancellations, we begin with a simple but crucial question: <strong>Does the way a guest books their stay affect the likelihood of cancellation?</strong>  
           </p>
+          <p>
+            Understanding this relationship is essential for hotel revenue managers and operations teams. Booking platforms—whether direct, third-party, or travel agent—introduce varying levels of uncertainty, customer loyalty, and cancellation risk.
+          </p>
+          <p>
+            In this section, we:
+          </p>
+          <ul>
+            <li>Explore cancellation trends across booking sources using a clear D3 bar chart</li>
+            <li>Compare cancellation rates between channels to identify high-risk segments</li>
+            <li>Use this insight to frame our next visualizations on guest behavior and demographics</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Visualization -->
+      <!-- Chart -->
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto">
-          <svg width="100%" height="500px" id="d3-chart"></svg>
+          <svg id="d3-chart" width="100%" height="500px"></svg>
           <div class="text-center mt-3">
-            <p class="text-muted fst-italic">Cancellation Rate by Distribution Channel (Spain)</p>
+            <p class="text-muted fst-italic">Figure 1: Cancellation Rate by Distribution Channel (Spain)</p>
           </div>
         </div>
       </div>
 
-      <!-- Insight -->
+      <!-- Key Insight -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Key Takeaway</h3>
-          <p>
-            This visualization shows that bookings made through Travel Agents tend to have the highest cancellation rate,
-            followed by Online Travel Agents. On the other hand, Direct Bookings demonstrate the lowest
-            cancellation rate. This trend suggests that encouraging more direct booking could be a viable strategy for reducing volatility
-            in hotel operations and improving revenue forecasting.
-          </p>
+          <h3 class="mb-4">Key Insight</h3>
+
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Booking Source Matters</h5>
+              <p class="card-text">
+                Our chart clearly shows that <strong>Travel Agent bookings are the most likely to be canceled</strong>, followed closely by Online Travel Agencies (OTAs). In contrast, <strong>Direct bookings</strong> have the lowest cancellation rate, signaling a higher level of guest commitment.
+              </p>
+              <ul>
+                <li>Travel Agent: Highest cancellation rate — over 50%</li>
+                <li>Direct Bookings: Lowest cancellation rate — under 25%</li>
+                <li>OTA: Moderate but significant cancellation risk</li>
+              </ul>
+              <p class="mb-0">
+                These trends reinforce the idea that hotels should promote direct booking through loyalty programs or exclusive perks to reduce cancellation risk and increase revenue reliability.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Visualization Design -->
+      <!-- Design Notes -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Static Visualization Design</h3>
-          <p>
-            This D3 bar chart includes key elements of an effective static visualization: a clear title, labeled axes, and a consistent
-            blue-to-orange color scheme for interactivity. The bars highlight comparative cancellation rates with hover effects for better engagement.
-            The layout uses Bootstrap for responsiveness and integrates smoothly into the site’s overall design system.
-          </p>
+          <h3 class="mb-4">Visualization Design Highlights</h3>
+          <ul>
+            <li>D3 bar chart with custom color and hover effect for clarity and engagement</li>
+            <li>Sorted layout to emphasize the contrast between channels</li>
+            <li>Responsive width and clean Bootstrap integration</li>
+            <li>Axes are labeled and percentage scale is used for intuitive comparison</li>
+          </ul>
         </div>
       </div>
     </div>
