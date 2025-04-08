@@ -31,56 +31,125 @@
 
   <!-- Header -->
   <header class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="fw-bold">Project Conclusion</h1>
-          <h2 class="mb-4">Final Reflections on Mediterranean Hotel Booking Cancellations</h2>
-        </div>
-      </div>
+    <div class="container text-center">
+      <h1 class="fw-bold">Conclusion</h1>
+      <h2 class="mb-4">Closing the Loop: What We Learned About Mediterranean Hotel Cancellations</h2>
     </div>
   </header>
 
   <!-- Main Content -->
   <section class="py-5">
     <div class="container">
+      <!-- Final Narrative -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Summary of Insights</h3>
+          <h3 class="mb-4">From Channels to Customers: A Journey Through Cancellations</h3>
           <p class="lead">
-            Our semester-long project explored the nuanced patterns behind hotel booking cancellations across Spain, France, and Italy. By combining diverse visualization techniques and filtering our data through multiple dimensions — such as booking source, guest loyalty, geography, demographics, and market segmentation — we uncovered key trends that can guide better decision-making in the hospitality sector.
-          </p>
-          <p>
-            We found that bookings made through Travel Agents and Online Travel Agencies are significantly more likely to be canceled than those made directly, a finding supported by our static D3 bar chart. This highlights a critical area where hotels can improve reliability by incentivizing direct bookings.
-          </p>
-          <p>
-            Our interactive Plotly line chart showed that repeat guests cancel far less frequently than new ones, underscoring the business value of loyalty. Meanwhile, geographic analysis revealed distinct differences between city and resort hotels — a reflection of shifting guest intentions across regions and seasons.
-          </p>
-          <p>
-            Our Altair-based demographic visualization demonstrated that families (especially those traveling with babies or children) cancel more often than couples or solo travelers. These trends suggest operational flexibility and marketing strategies should vary depending on guest type.
-          </p>
-          <p>
-            Lastly, our market segmentation heatmap revealed deeper patterns in cancellation behavior across customer types and booking purposes, providing useful takeaways for revenue management and guest targeting.
+            This project began with a simple question: <strong>why do hotel bookings get canceled?</strong> Over the course of the semester, we examined this question through the lens of over 22,000 bookings across Spain, France, and Italy — three tourism-driven Mediterranean economies. What followed was a multi-faceted exploration of cancellation behavior through the themes of access, loyalty, location, demographics, and strategy.
           </p>
         </div>
       </div>
 
-      <!-- Future Work -->
+      <!-- Story Highlights -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Future Considerations</h3>
+          <h3 class="mb-4">What We Found</h3>
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">📦 Booking Channel Sets the Tone</h5>
+              <p class="card-text">
+                Our first visualization showed that how a guest books — whether directly or through a third party — strongly impacts cancellation likelihood.
+              </p>
+              <ul>
+                <li>📉 <strong>Direct bookings:</strong> lowest cancellation rate (guest commitment is higher)</li>
+                <li>🚨 <strong>Travel agents & OTAs:</strong> most cancellations (possibly due to flexibility or non-refundable offers)</li>
+                <li>🎯 Insight: Hotels can reduce risk by promoting direct booking strategies</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">💙 Loyalty Is Stability</h5>
+              <p class="card-text">
+                Our interactive line plot revealed that repeat guests are far more likely to keep their bookings.
+              </p>
+              <ul>
+                <li>🔁 Repeat guests cancel less than 10% of the time</li>
+                <li>🧑‍🤝‍🧑 New guests show spikes up to 40%</li>
+                <li>✨ Loyalty is a powerful buffer against unpredictability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">🗺️ Geography Matters</h5>
+              <p class="card-text">
+                Our map-based geographic analysis showed that cancellation patterns vary by country and hotel type.
+              </p>
+              <ul>
+                <li>🏖️ Resort hotels see more seasonal cancellation spikes</li>
+                <li>🏙️ City hotels tend to be more consistent</li>
+                <li>🌍 Context matters when modeling guest behavior</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">👨‍👩‍👧‍👦 Demographics Influence Behavior</h5>
+              <p class="card-text">
+                Demographic plots showed that guest types (like families or solo travelers) shape booking stability.
+              </p>
+              <ul>
+                <li>👶 Families with babies had the highest cancellation rates</li>
+                <li>🧍 Solo travelers were the most consistent</li>
+                <li>👨‍👩 Targeted policies could reduce cancellations for family-oriented bookings</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">🧩 Segmenting for Strategy</h5>
+              <p class="card-text">
+                Our final matrix explored cancellation rates across market segments and customer types.
+              </p>
+              <ul>
+                <li>📊 Groups and corporate segments had distinct cancellation profiles</li>
+                <li>🔍 Transient vs. contract guests behaved very differently</li>
+                <li>🧠 Market segmentation offers powerful levers for retention strategy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forward Looking -->
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+          <h3 class="mb-4">Where This Can Go</h3>
           <p>
-            With more time and resources, future work could include integrating price sensitivity, customer satisfaction scores, or seasonality-adjusted demand forecasts. Additional visualizations — such as interactive Sankey diagrams or machine learning-based risk predictions — could help better capture the complexity of hotel cancellations in a globalized tourism landscape.
+            This project opened the door to new questions and future possibilities:
+          </p>
+          <ul>
+            <li>📅 How do cancellations evolve post-pandemic?</li>
+            <li>📈 What role does price sensitivity or weather play?</li>
+            <li>🤖 Could machine learning models predict cancellations by profile?</li>
+          </ul>
+          <p>
+            With more data, tools, and time, these avenues could strengthen hotel operations and guest satisfaction across even more regions.
           </p>
         </div>
       </div>
 
-      <!-- Final Thoughts -->
+      <!-- Final Message -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Final Thoughts</h3>
+          <h3 class="mb-4">Final Reflection</h3>
           <p class="fw-bold">
-            Ultimately, this project highlights the power of thoughtful data cleaning, meaningful visual storytelling, and collaborative analysis. Through our work, we demonstrated how data-driven insights can support operational efficiency, customer engagement, and strategic planning across Mediterranean hotel markets.
+            From static visualizations to interactive tools, this site tells a story: one of travel, trust, and the fragile nature of plans. In unpacking how and why people cancel, we’ve not only uncovered data — we’ve helped shape a roadmap toward smarter, more resilient hotel strategies in the Mediterranean and beyond.
           </p>
         </div>
       </div>
@@ -94,7 +163,6 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
