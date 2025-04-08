@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Average Room Rates - Influence on Cancellation</title>
+    <title>Cancellation Trends & Average Room Rates</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Mediterranean Hotel Analysis</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="distribution.html">Distribution Channels</a></li>
-        <li class="nav-item"><a class="nav-link" href="loyalty.html">Guest Loyalty</a></li>
-        <li class="nav-item"><a class="nav-link" href="geographic.html">Geographic Analysis</a></li>
-        <li class="nav-item"><a class="nav-link" href="roomRates_travelerCancel.html">Demographics</a></li>
-        <li class="nav-item"><a class="nav-link" href="market_segmentation.html">Market Segments</a></li>
-        <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Mediterranean Hotel Analysis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="distribution.html">Distribution Channels</a></li>
+            <li class="nav-item"><a class="nav-link" href="loyalty.html">Guest Loyalty</a></li>
+            <li class="nav-item"><a class="nav-link" href="geographic.html">Geographic Analysis</a></li>
+            <li class="nav-item"><a class="nav-link" href="roomRates_travelerCancel.html">Demographics</a></li>
+            <li class="nav-item"><a class="nav-link" href="market_segmentation.html">Market Segments</a></li>
+            <li class="nav-item"><a class="nav-link" href="conclusion.html">Conclusion</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Header -->
     <header class="py-5 bg-light text-center">
@@ -43,30 +44,48 @@
     <!-- Main Content -->
     <section class="py-5">
         <div class="container">
-            <!-- Instructions -->
-            <div class="mb-4">
-                <h3>How to Interact with the Visualization</h3>
-                <p>
-                    You can select a specific interval on the line chart (monthly average room rates). Drag across the timeline to set your interval of interest. 
-                    The bar chart below will automatically update to reflect which types of travelers were most likely to cancel bookings in that selected timeframe.
-                </p>
+            
+            <!-- Analysis Overview -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4">Analysis Overview</h3>
+                    <p>
+                        This visualization explores the relationship between monthly room rates and cancellation patterns by traveler type across Mediterranean countries, helping hotels identify pricing trends and high-risk customer segments.
+                    </p>
+                </div>
             </div>
 
             <!-- Visualization Embed -->
-            <div class="mb-5 text-center">
-                <iframe src="altair_advCancel.html" width="100%" height="400px" frameborder="0" style="border: none;"></iframe>
-                <p class="text-muted mt-2 fst-italic">Interactive Analysis: Monthly ADR and Traveler Cancellations</p>
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <div class="mb-4">
+                        <iframe src="altair_advCancel.html" width="100%" height="500px" frameborder="0" style="border: none;"></iframe>
+                    </div>
+                    <p class="text-muted fst-italic">Market Segment vs. Customer Type Cancellation Rates by Country</p>
+                </div>
             </div>
 
-            <!-- Analysis Section -->
-            <div class="mb-5">
-                <h3>Insights & Interpretation</h3>
-                <p>
-                    Based on the interactive visualization above, one could see that it's a joint graph between a line and bar plot. The reasoning behind this is to provide accurate insights behind what might be driving cancellation rates in hotels in Spain, Italy, and France - we can determine exploratory and explanatory insights from this visualization. The line plot measures average room rates respective to a specific month and year; for these values, the Average Daily Room Rate has been aggregated from a daily to a monthly rate, which maintains consistency with the date (independent variable). As for the specific trends that we can see, this relationship has been designated by the specific country the hotels pertain to. For example, we see a similar, potentially cyclical trend, that might hint at seasonality between the Summer and Winter months. It looks like that the room rates are at elevated values for Summer months, which suggests that demand might be higher during these months, due to factors like tourism. On a per country basis, it is hard to make a determinable conclusion other than the fact that Spain has had the highest Summer monthly rates (2016 & 2017) whereas they had the lowest Winter monthly rates (2015) and France also had the lowest (2017).
-                </p>
-                <p>
-                    As for the bar plot, this analysis is between traveler type and the percentage of cancellations respective to that type. Our motive to include this graph was to be able to understand, at specific periods, which types of travelers were cancelling reservations more so than the other groups. This plot updates per the selection interval the user makes in the line plot. Overall, though, we can clearly see that an overwhelming majority of cancellations stem from the "couple" traveler type. This is an interesting factor because it is at 70%, which is ~60% higher than the next respective type (family). This possibly suggests that couples have more freedom to move hotel bookings or a higher incentive to look for bargains and, therefore, cancel bookings that are too expensive/not worth it. This also suggests that, for the other types, it might be too difficult for families or solo travelers to cancel bookings: families typically have a lot of responsibilities and solo travelers might be highly correlated with business travel.
-                </p>
+            <!-- Key Insights -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4">Key Insights</h3>
+                    <p>
+                        Based on the interactive visualization above, one could see that it's a joint graph between a line and bar plot. The reasoning behind this is to provide accurate insights behind what might be driving cancellation rates in hotels in Spain, Italy, and France - we can determine exploratory and explanatory insights from this visualization. The line plot measures average room rates respective to a specific month and year; for these values, the Average Daily Room Rate has been aggregated from a daily to a monthly rate, which maintains consistency with the date (independent variable). As for the specific trends that we can see, this relationship has been designated by the specific country the hotels pertain to. For example, we see a similar, potentially cyclical trend, that might hint at seasonality between the Summer and Winter months. It looks like that the room rates are at elevated values for Summer months, which suggests that demand might be higher during these months, due to factors like tourism. On a per country basis, it is hard to make a determinable conclusion other than the fact that Spain has had the highest Summer monthly rates (2016 & 2017) whereas they had the lowest Winter monthly rates (2015) and France also had the lowest (2017).
+                    </p>
+                    <p>
+                        As for the bar plot, this analysis is between traveler type and the percentage of cancellations respective to that type. Our motive to include this graph was to be able to understand, at specific periods, which types of travelers were cancelling reservations more so than the other groups. This plot updates per the selection interval the user makes in the line plot. Overall, though, we can clearly see that an overwhelming majority of cancellations stem from the "couple" traveler type. This is an interesting factor because it is at 70%, which is ~60% higher than the next respective type (family). This possibly suggests that couples have more freedom to move hotel bookings or a higher incentive to look for bargains and, therefore, cancel bookings that are too expensive/not worth it. This also suggests that, for the other types, it might be too difficult for families or solo travelers to cancel bookings: families typically have a lot of responsibilities and solo travelers might be highly correlated with business travel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How to Use -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4">How to Use This Visualization</h3>
+                    <p>
+                        You can select a specific interval on the line chart (monthly average room rates). Drag across the timeline to set your interval of interest. The bar chart below will automatically update to reflect which types of travelers were most likely to cancel bookings in that selected timeframe.
+                    </p>
+                </div>
             </div>
 
             <!-- Return to Homepage -->
