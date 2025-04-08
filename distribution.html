@@ -46,14 +46,14 @@
   <!-- Main Content -->
   <section class="py-5">
     <div class="container">
-      <!-- Analysis Intro -->
+      <!-- Overview -->
       <div class="row mb-5">
         <div class="col-lg-8 mx-auto">
           <h3 class="mb-4">Analysis Overview</h3>
           <p class="lead">
-            This visualization examines cancellation rates across different distribution channels used for hotel bookings in Spain. 
-            As part of our broader project analyzing Mediterranean hotel dynamics, this analysis highlights which booking methods — 
-            such as travel agents, direct websites, or online travel agencies — are most associated with cancellations.
+            This static bar chart explores the cancellation rates across different booking distribution channels in Spanish hotels.
+            As part of our Mediterranean hotel analysis, we investigate which booking methods — such as travel agents, direct booking,
+            or online travel agencies — are more prone to cancellations.
           </p>
         </div>
       </div>
@@ -61,22 +61,34 @@
       <!-- Visualization -->
       <div class="row mb-5">
         <div class="col-lg-10 mx-auto">
-          <div class="visualization-container">
-            <svg width="100%" height="500px" id="d3-chart"></svg>
-            <div class="text-center mt-3">
-              <p class="text-muted fst-italic">Cancellation Rate by Distribution Channel (Spain)</p>
-            </div>
+          <svg width="100%" height="500px" id="d3-chart"></svg>
+          <div class="text-center mt-3">
+            <p class="text-muted fst-italic">Cancellation Rate by Distribution Channel (Spain)</p>
           </div>
         </div>
       </div>
 
-      <!-- Insights -->
+      <!-- Insight -->
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+          <h3 class="mb-4">Key Takeaway</h3>
+          <p>
+            This visualization shows that bookings made through Travel Agents tend to have the highest cancellation rate,
+            followed by Online Travel Agents. On the other hand, Direct Bookings demonstrate the lowest
+            cancellation rate. This trend suggests that encouraging more direct booking could be a viable strategy for reducing volatility
+            in hotel operations and improving revenue forecasting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Visualization Design -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h3 class="mb-4">Key Insight</h3>
+          <h3 class="mb-4">Static Visualization Design</h3>
           <p>
-            The bar chart reveals that bookings made through Travel Agents tend to have the highest cancellation rates, while Direct bookings show the lowest. 
-            This insight is important for hotel managers looking to reduce booking volatility and improve forecasting — encouraging more direct bookings could lead to fewer cancellations.
+            This D3 bar chart includes key elements of an effective static visualization: a clear title, labeled axes, and a consistent
+            blue-to-orange color scheme for interactivity. The bars highlight comparative cancellation rates with hover effects for better engagement.
+            The layout uses Bootstrap for responsiveness and integrates smoothly into the site’s overall design system.
           </p>
         </div>
       </div>
