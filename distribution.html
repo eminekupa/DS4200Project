@@ -49,13 +49,13 @@
             In our investigation of hotel booking cancellations, we begin with a simple but crucial question: <strong>Does the way a guest books their stay affect the likelihood of cancellation?</strong>  
           </p>
           <p>
-            Understanding this relationship is essential for hotel revenue managers and operations teams. Booking platforms—whether direct, third-party, or travel agent—introduce varying levels of uncertainty, customer loyalty, and cancellation risk.
+            Understanding this relationship is essential for hotel revenue managers and operations teams. Booking platforms introduce varying levels of uncertainty, customer loyalty, and cancellation risk.
           </p>
           <p>
             In this section, we:
           </p>
           <ul>
-            <li>Explore cancellation trends across booking sources using a clear D3 bar chart</li>
+            <li>Explore cancellation trends across booking sources using a D3 bar chart</li>
             <li>Compare cancellation rates between channels to identify high-risk segments</li>
             <li>Use this insight to frame our next visualizations on guest behavior and demographics</li>
           </ul>
@@ -67,7 +67,7 @@
         <div class="col-lg-10 mx-auto">
           <svg id="d3-chart" width="100%" height="500px"></svg>
           <div class="text-center mt-3">
-            <p class="text-muted fst-italic">Figure 1: Cancellation Rate by Distribution Channel (Spain)</p>
+            <p class="text-muted fst-italic">Figure 1: Cancellation Rate by Distribution Channel</p>
           </div>
         </div>
       </div>
@@ -81,11 +81,11 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Booking Source Matters</h5>
               <p class="card-text">
-                Our chart clearly shows that <strong>Travel Agent bookings are the most likely to be canceled</strong>, followed closely by Online Travel Agencies (OTAs). In contrast, <strong>Direct bookings</strong> have the lowest cancellation rate, signaling a higher level of guest commitment.
+                Our chart clearly shows that Travel Agent bookings are the most likely to be canceled, followed closely by Online Travel Agencies (OTAs). In contrast, Direct bookings have the lowest cancellation rate, signaling a higher level of guest commitment.
               </p>
               <ul>
-                <li>Travel Agent: Highest cancellation rate — over 50%</li>
-                <li>Direct Bookings: Lowest cancellation rate — under 25%</li>
+                <li>Travel Agent: Highest cancellation rate (over 50%)</li>
+                <li>Direct Bookings: Lowest cancellation rate (under 25%)</li>
                 <li>OTA: Moderate but significant cancellation risk</li>
               </ul>
               <p class="mb-0">
@@ -103,7 +103,6 @@
           <ul>
             <li>D3 bar chart with custom color and hover effect for clarity and engagement</li>
             <li>Sorted layout to emphasize the contrast between channels</li>
-            <li>Responsive width and clean Bootstrap integration</li>
             <li>Axes are labeled and percentage scale is used for intuitive comparison</li>
           </ul>
         </div>
