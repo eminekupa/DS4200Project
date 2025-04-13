@@ -54,14 +54,17 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Visualization Embed -->
+            
+            <!-- Visualization Embed with Fixed Height and Proper Centering -->
             <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <div class="mb-4">
-                        <iframe src="altair_advCancel.html" width="100%" height="500px" frameborder="0" style="border: none;"></iframe>
+                <div class="col-lg-10 mx-auto">
+                    <div class="visualization-container text-center">
+                        <!-- Fixed height and width container for consistency -->
+                        <div class="mb-4" style="height: 600px; width: 100%; margin: 0 auto;">
+                            <iframe src="altair_advCancel.html" width="100%" height="100%" frameborder="0" style="border: none;"></iframe>
+                        </div>
+                        <p class="text-muted fst-italic">Market Segment vs. Customer Type Cancellation Rates by Country</p>
                     </div>
-                    <p class="text-muted fst-italic">Market Segment vs. Customer Type Cancellation Rates by Country</p>
                 </div>
             </div>
 
